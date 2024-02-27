@@ -53,7 +53,7 @@
                 <Property Name="Augbl" Type="Edm.String" MaxLength="10" sap:label="Clrng doc." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
                 <Property Name="Augdt" Type="Edm.DateTime" Precision="7" sap:display-format="Date" sap:label="Clearing" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
                 <Property Name="Dtvencimento" Type="Edm.DateTime" Precision="7" sap:display-format="Date" sap:label="Due date" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
-                <Property Name="Status" Type="Edm.String" sap:label="Status" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Status" Type="Edm.String" sap:label="Status" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
                 <Property Name="PortalUser" Type="Edm.String" Nullable="false" sap:label="User logged" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
                 <Property Name="Chave" Type="Edm.String" Nullable="false" sap:label="Country" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
                 <Property Name="Butxt" Type="Edm.String" MaxLength="25" sap:label="Name 2" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
@@ -226,7 +226,7 @@
                     <PropertyRef Name="Bankl"/>
                 </Key>
                 <Property Name="Lifnr" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Vendor" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
-                <Property Name="PortalUser" Type="Edm.String" Nullable="false" MaxLength="100" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="PortalUser" Type="Edm.String" Nullable="false" MaxLength="100" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
                 <Property Name="Banks" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Bank Country" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
                 <Property Name="Bankn" Type="Edm.String" Nullable="false" MaxLength="18" sap:label="Bank Account" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
                 <Property Name="Bkont" Type="Edm.String" Nullable="false" MaxLength="2" sap:label="Control key" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>

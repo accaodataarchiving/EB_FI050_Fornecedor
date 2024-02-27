@@ -6,6 +6,11 @@
     xmlns="sap.m"
     controllerName="br.com.eldoradobrasil.fi050.fi050fornecedor.controller.DadosFornecedor"
 >
+<ScrollContainer
+		height="100%"
+		width="100%"
+		vertical="true"
+		focusable="true">
     <VBox class="sapUiSmallMargin">
         <f:SimpleForm
             id="SimpleFormToolbar"
@@ -176,4 +181,5 @@
             href="https://gcertifica.gedanken.com.br/eldorado/"
         />
     </VBox>
+	</ScrollContainer>
 </mvc:View>

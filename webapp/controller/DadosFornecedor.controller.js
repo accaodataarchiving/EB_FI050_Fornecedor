@@ -16,8 +16,12 @@ sap.ui.define([
                 that = this;
                 var oModel = this.getOwnerComponent().getModel("DadosFornecedorModel");             
                 this.getView().setModel(oModel, "oModel");
-                var email = sap.ushell.Container.getService("UserInfo").getEmail();             
-
+                var email = sap.ushell.Container.getService("UserInfo").getEmail();
+                
+                if(email == null){
+                    email = "felipe.goes@accao.com.br"
+                }
+                
                 oModel.read("/DadosFornecedorSet('" + email + "')", {
 	    			success: function(oData, response) {
                         //Info Fornecedor
@@ -49,7 +53,9 @@ sap.ui.define([
 
 
                 //Tabela Dados Bancários
-                oModel.read("/DadosBancariosFornecedorSet/?$filter=PortalUser eq'" + email + "'", {
+                var oFilter = new sap.ui.model.Filter('PortalUser',sap.ui.model.FilterOperator.EQ, email);
+                oModel.read("/DadosBancariosFornecedorSet/", {    
+                    filters : [oFilter],
 	    			success: function(oData, response) {
                         var table = that.getView().byId("tableDadosBancarios");      
                         var oODataJSONModel = new sap.ui.model.json.JSONModel();
