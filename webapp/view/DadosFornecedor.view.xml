@@ -1,0 +1,179 @@
+<mvc:View
+    xmlns:l="sap.ui.layout"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m"
+    controllerName="br.com.eldoradobrasil.fi050.fi050fornecedor.controller.DadosFornecedor"
+>
+    <VBox class="sapUiSmallMargin">
+        <f:SimpleForm
+            id="SimpleFormToolbar"
+            editable="true"
+            layout="ResponsiveGridLayout"
+            labelSpanXL="4"
+            labelSpanL="3"
+            labelSpanM="4"
+            labelSpanS="12"
+            adjustLabelSpan="false"
+            emptySpanXL="0"
+            emptySpanL="4"
+            emptySpanM="0"
+            emptySpanS="0"
+            columnsXL="2"
+            columnsL="1"
+            columnsM="1"
+            singleContainerFullSize="false"
+            ariaLabelledBy="Title1"
+        >
+            <f:toolbar>
+                <Toolbar id="TB1">
+                    <Title
+                        id="Title1"
+                        text="{i18n>supplierTitle}"
+                    />
+                </Toolbar>
+            </f:toolbar>
+            <f:content>
+                <Toolbar ariaLabelledBy="Title2">
+                    <Title
+                        id="Title2"
+                        text="{i18n>supplierName}"
+                    />
+                </Toolbar>
+                <Label text="{i18n>lblID}" />
+                <Input
+                    xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+                    cd:w5g.dt.context="/DadosFornecedorSet"
+                    editable="false"
+                    id="inputID"
+                />
+                <Label text="{i18n>lblName}" />
+                <Input
+                    value="{Name1}{Name2}"
+                    editable="false"
+                    id="inputName"
+                />
+                <Label text="{i18n>lblCNPJ}" />
+                <Input
+                    value="{Name1}{Name2}"
+                    editable="false"
+                    id="inputCNPJ"
+                />
+                <Label text="{i18n>lblIE}" />
+                <Input
+                    value="{Name1}{Name2}"
+                    editable="false"
+                    id="inputIE"
+                />
+
+                <Toolbar ariaLabelledBy="Title3">
+                    <Title
+                        id="Title3"
+                        text="{i18n>supplierAddress}"
+                    />
+                </Toolbar>
+                <Label text="{i18n>lblAddress}" />
+                <Input
+                    editable="false"
+                    id="inputEndereco"
+                />
+                <Label text="{i18n>lblBairro}" />
+                <Input
+                    editable="false"
+                    id="inputBairro"
+                />
+                <Label text="{i18n>lblEstado}" />
+                <Input
+                    editable="false"
+                    id="inputEstado"
+                />
+                <Label text="{i18n>lblCidade}" />
+                <Input
+                    editable="false"
+                    id="inputCidade"
+                />
+                <Label text="{i18n>lblPais}" />
+                <Input
+                    editable="false"
+                    id="inputPais"
+                />
+                <Label text="{i18n>lblCEP}" />
+                <Input
+                    editable="false"
+                    id="inputCEP"
+                />
+
+                <Toolbar ariaLabelledBy="Title4">
+                    <Title
+                        id="Title4"
+                        text="{i18n>supplierContact}"
+                    />
+                </Toolbar>
+                <Label text="{i18n>lblEmail}" />
+                <Input
+                    editable="false"
+                    id="inputEmail"
+                />
+                <Label text="{i18n>lblTelef1}" />
+                <Input
+                    editable="false"
+                    id="inputTelefone1"
+                />
+                <Label text="{i18n>lblTelef1}" />
+                <Input
+                    editable="false"
+                    id="inputTelefone2"
+                />
+                <Label text="{i18n>lblTelef1}" />
+                <Input
+                    editable="false"
+                    id="inputTelefone3"
+                />
+            </f:content>
+        </f:SimpleForm>
+
+                <Table id="tableDadosBancarios" items="{ path: 'DadosBancModel>/results' }" width="100%" noDataText="Dados Bancários não encotrados" headerText="{i18n>bankInformation}">
+                    <columns>
+                        <Column width="35%">
+                            <Text text="Banco" />
+                        </Column>
+                        <Column width="10%">
+                            <Text text="Agência" />
+                        </Column>
+						<Column width="15%">
+                            <Text text="Conta" />
+                        </Column>
+						<Column width="25%">
+                            <Text text="Bairro" />
+                        </Column>
+						<Column width="20%">
+                            <Text text="Cidade" />
+                        </Column>
+						<Column width="5%">
+                            <Text text="UF" />
+                        </Column>
+                    </columns>
+
+               <items>
+                    <ColumnListItem type="Navigation">
+                        <cells>
+                            <Text text="{DadosBancModel>Banco} - {DadosBancModel>Banka}"/>
+							<Text text="{DadosBancModel>Brnch}"/>
+                            <Text text="{DadosBancModel>Bankn}"/>
+							<Text text="{DadosBancModel>BancoStras}"/>
+							<Text text="{DadosBancModel>BancoOrt01}"/>
+							<Text text="{DadosBancModel>BancoProvz}"/>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+                </Table>
+
+
+        <Link
+            text="{i18n>alerta}"
+            target="_blank"
+            href="https://gcertifica.gedanken.com.br/eldorado/"
+        />
+    </VBox>
+</mvc:View>
