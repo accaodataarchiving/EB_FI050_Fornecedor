@@ -138,25 +138,25 @@
             </f:content>
         </f:SimpleForm>
 
-                <Table id="tableDadosBancarios" items="{ path: 'DadosBancModel>/results' }" width="100%" noDataText="Dados Bancários não encotrados" headerText="{i18n>bankInformation}">
+                <Table id="tableDadosBancarios" items="{ path: 'DadosBancModel>/results' }" width="100%" noDataText="{i18n>notFound}" headerText="{i18n>bankInformation}">
                     <columns>
                         <Column width="35%">
-                            <Text text="Banco" />
+                            <Text text="{i18n>lblBanco}" />
                         </Column>
                         <Column width="10%">
-                            <Text text="Agência" />
+                            <Text text="{i18n>lblAgencia}" />
                         </Column>
 						<Column width="15%">
-                            <Text text="Conta" />
+                            <Text text="{i18n>lblConta}" />
                         </Column>
 						<Column width="25%">
-                            <Text text="Bairro" />
+                            <Text text="{i18n>lblBairro}" />
                         </Column>
 						<Column width="20%">
-                            <Text text="Cidade" />
+                            <Text text="{i18n>lblCidade}" />
                         </Column>
 						<Column width="5%">
-                            <Text text="UF" />
+                            <Text text="{i18n>lblEstado}" />
                         </Column>
                     </columns>
 
